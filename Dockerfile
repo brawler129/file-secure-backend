@@ -10,7 +10,7 @@ RUN mkdir /file_secure
 WORKDIR /file_secure
 COPY ./file_secure /file_secure
 
-RUN adduser -D user
+RUN adduser --no-create-home user
 USER user
 
 
