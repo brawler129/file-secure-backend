@@ -1,5 +1,4 @@
 FROM python:3.6.10
-MAINTAINER Devesh Pradhan
 
 ENV PYTHONUNBUFFERED 1
 

@@ -11,7 +11,6 @@ djangorestframework-recursive==0.1.2
 djangorestframework-simplejwt==4.4.0
 mysqlclient==1.4.6
 PyJWT==1.7.1
-python-magic-bin==0.4.14
 pytz==2019.3
 qrcode==6.1
 six==1.14.0
