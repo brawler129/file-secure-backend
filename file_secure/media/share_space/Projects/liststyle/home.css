@@ -1,0 +1,11 @@
+ul .coffee{
+	list-style: square inside url("coffee.jpg")
+}
+
+ul .tea{
+	list-style: square inside url("tea.jpg")
+}
+
+ul .coke{
+	list-style: square inside url("coke.jpg")
+}

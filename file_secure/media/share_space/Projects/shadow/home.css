@@ -1,0 +1,11 @@
+.text-shadow{
+	text-shadow: 0px 0px 2px black,0 0 25px blue,0 0 5px darkblue;
+	color:white;
+}
+
+div{
+	width: 250px;
+	height:100px;
+	background-color: lightgreen;
+	box-shadow: 10px 20px 30px green;
+}

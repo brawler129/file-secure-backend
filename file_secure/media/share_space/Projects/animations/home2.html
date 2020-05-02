@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<style type="text/css">
+		div{
+			width:200px;
+			height:200px;
+			background-color: red;
+			border:2px solid red;
+			position:relative;
+			animation-name: cc;
+			animation-duration:8s;
+			animation-delay: 2s;
+			animation-timing-function: linear;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+		}
+
+		@keyframes bb{
+			0%{background-color: red;}
+			25%{background-color: pink;}
+			50%{background-color: yellow}
+			100%{background-color: orange}
+		}
+
+		@keyframes cc{
+			0%{background-color: red;transform: rotate(120deg);left:0;top:0;}
+			25%{background-color: yellow;left:400px;top:0;}
+			50%{background-color:blue;left:400px;top:400px;}
+			75%{background-color:green;left:0;top:400px;}
+			100%{background-color:violet;left:0;top:0;}
+		}
+
+	</style>
+</head>
+<body>
+	<div>
+		
+	</div>
+
+</body>
+</html>

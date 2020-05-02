@@ -1,0 +1,17 @@
+.container{
+	width:800px;
+	border:2px solid brown;
+	font-family: times new roman;
+	font-size:22px;
+	font-style:italic;
+	line-height:27px;
+	-webkit-column-count:5;
+	-webkit-column-rule:4px double red;
+	padding:10px 10px 10px 10px;
+	text-align:justify;
+	
+}
+
+.container p{
+	opacity: 0.5;
+}
