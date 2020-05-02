@@ -12,7 +12,7 @@ from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser
 from rest_framework import status
 from django.http import HttpResponse, FileResponse
-import magic
+# import magic
 
 
 def get_paths(base_path, filename):
