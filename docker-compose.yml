@@ -9,3 +9,20 @@ services:
             - ./file_secure:/file_secure
         command: >
             sh -c "python manage.py runserver 0.0.0.0:8000"
+        depends_on: 
+            - db
+        environment: 
+            DB_HOST : 'db'
+            DB_NAME : 'file_secure'
+            DB_PASSWORD : 'password'
+            DB_USER : 'root'
+    
+    db:
+        image: mysql:8.0.20
+        ports:
+            - "3306:3306"
+        environment: 
+            MYSQL_DATABASE : 'file_secure'
+            MYSQL_USER : 'root'
+            MYSQL_PASSWORD : 'password'
+            MYSQL_ROOT_PASSWORD : 'password'
