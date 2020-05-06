@@ -9,9 +9,11 @@ services:
             - ./file_secure:/file_secure
         command: >
             sh -c "python manage.py runserver 0.0.0.0:8000"
+        tty: true
+        stdin_open: true
         depends_on: 
             - db
-        environment: 
+        environment:
             DB_HOST : 'db'
             DB_NAME : 'file_secure'
             DB_PASSWORD : 'password'
