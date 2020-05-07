@@ -22,6 +22,8 @@ services:
     db:
         image: mysql:8.0.20
         command: --default-authentication-plugin=mysql_native_password
+        volumes:
+            - "/var/lib/docker/volumes/file_secure/database:/var/lib/mysql"
         ports:
             - "3306:3306"
         environment: 
