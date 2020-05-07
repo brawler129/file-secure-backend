@@ -12,7 +12,7 @@ from rest_framework.response import Response
 from rest_framework.parsers import MultiPartParser
 from rest_framework import status
 from django.http import HttpResponse, FileResponse
-# import magic
+import mimetypes
 
 
 def get_paths(base_path, filename):
@@ -101,9 +101,8 @@ def download_file_view(request):
         record = create_record_object(data=request.data, user=request.user)
         path, file_path = get_paths(record['path'], record['filename'])
         download_serializer = DownloadSerializer(data=record)
-        mime_type = magic.from_file(file_path, mime=True)
+        mime_type = mimetypes.MimeTypes().guess_type(file_path)[0]
         print(mime_type)
-        print(smart_str(file_path))
         if fileExists(file_path):
             if download_serializer.is_valid():
                 response = HttpResponse(open(file_path, 'rb'), content_type=mime_type)
