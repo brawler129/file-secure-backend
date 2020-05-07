@@ -14,10 +14,10 @@ services:
         depends_on: 
             - db
         environment:
-            DB_HOST : 'db'
-            DB_NAME : 'file_secure'
-            DB_PASSWORD : 'password'
-            DB_USER : 'root'
+            DB_HOST : ${DB_HOST_NAME}
+            DB_NAME : ${DB_DATABASE_NAME}
+            DB_PASSWORD : ${DB_PASS}
+            DB_USER : ${DB_USER_NAME}
     
     db:
         image: mysql:8.0.20
@@ -27,7 +27,7 @@ services:
         ports:
             - "3306:3306"
         environment: 
-            MYSQL_DATABASE : 'file_secure'
-            MYSQL_USER : 'root'
-            MYSQL_PASSWORD : 'password'
-            MYSQL_ROOT_PASSWORD : 'password'
+            MYSQL_DATABASE : ${DB_DATABASE_NAME}
+            MYSQL_USER : ${DB_USER_NAME}
+            MYSQL_PASSWORD : ${DB_PASS}
+            MYSQL_ROOT_PASSWORD : ${DB_PASS}
